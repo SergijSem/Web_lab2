@@ -14,7 +14,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((requests) -> requests
-                        .anyRequest().authenticated() // ВСІ запити вимагають авторизацію
+                        .anyRequest().authenticated()
                 )
                 .formLogin((form) -> form
                         .defaultSuccessUrl("/hello", true)
